@@ -1,5 +1,6 @@
-@import url(https://fonts.googleapis.com/css?family=Hammersmith+One:regular);
-@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+/* <style> */
+/* @import url(https://fonts.googleapis.com/css?family=Hammersmith+One:regular);
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900); */
 
 /* ==================================NULL================================================ */
 *,
@@ -61,36 +62,36 @@ a {
 
 /* ================================================================ */
 /* .wrapper::after {
-    content: url(img/svg/back-element-serf.svg);
-    position: absolute;
-    top: 0;
-    transform: translate(-10%, 0);
-    width: 100%;
-    height: 2436px;
+content: url(img/svg/back-element-serf.svg);
+position: absolute;
+top: 0;
+transform: translate(-10%, 0);
+width: 100%;
+height: 2436px;
 }
 
 
 
 [data-sun]::before {
-    content: url(img/svg/sun.svg);
-    position: absolute;
-    bottom: -180px;
-    right: -100px;
-    width: rem(226);
-    height: rem(227);
-    animation: rotate 30s infinite linear;
-    animation-name: sun;
-    z-index: 2;
+content: url(img/svg/sun.svg);
+position: absolute;
+bottom: -180px;
+right: -100px;
+width: rem(226);
+height: rem(227);
+animation: rotate 30s infinite linear;
+animation-name: sun;
+z-index: 2;
 }
 
 @keyframes sun {
-    0% {
-        transform: rotate(0deg);
-    }
+0% {
+transform: rotate(0deg);
+}
 
-    100% {
-        transform: rotate(360deg);
-    }
+100% {
+transform: rotate(360deg);
+}
 } */
 
 /* ======================================================================================= */
@@ -101,7 +102,6 @@ a {
     overflow: hidden;
     margin: 0 auto;
     position: relative;
-    /* padding: 0px 20px; */
 }
 
 [class*="__container"] {
@@ -191,7 +191,6 @@ a {
 .menu__body {
     padding: 15px 40px;
     background: #2A2A2A;
-    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 20px 40px rgba(0, 0, 0, 0.25); */
     display: flex;
     justify-content: end;
     font-family: "Inter", "arial", sans-serif;
@@ -281,7 +280,7 @@ a {
 }
 
 .main-section__container::before {
-    content: url(img/svg/wave2.svg);
+    content: url(https://raw.githubusercontent.com/kartsevnik/sup_jbay_zone/6091d56ad988c976d25dc6ceb5531f9a1b5ef170/img/svg/wave2.svg);
     position: absolute;
     bottom: 0;
     left: 0;
@@ -451,7 +450,7 @@ a {
 
 @media (max-width:1200px) {
     .descrizione__container {
-        padding: 25px 15px 100px 15px;
+        padding: 25px 15px 120px 15px;
         display: grid;
         grid-template-columns: 1fr;
         gap: 0px;
@@ -460,7 +459,7 @@ a {
 }
 
 .descrizione__container:after {
-    content: url(img/svg/wave-white.svg);
+    content: url(https://raw.githubusercontent.com/kartsevnik/sup_jbay_zone/6091d56ad988c976d25dc6ceb5531f9a1b5ef170/img/svg/wave-white.svg);
     position: absolute;
     bottom: 15px;
     left: 0;
@@ -539,7 +538,7 @@ a {
 }
 
 .benefici__container:after {
-    content: url(img/svg/wave-white-reverse.svg);
+    content: url(https://raw.githubusercontent.com/kartsevnik/sup_jbay_zone/6091d56ad988c976d25dc6ceb5531f9a1b5ef170/img/svg/wave-white-reverse.svg);
     position: absolute;
     bottom: 15px;
     left: 0;
@@ -625,7 +624,7 @@ a {
 }
 
 .garanzia__container:after {
-    content: url(img/svg/wave-azurro.svg);
+    content: url(https://raw.githubusercontent.com/kartsevnik/sup_jbay_zone/6091d56ad988c976d25dc6ceb5531f9a1b5ef170/img/svg/wave-azurro.svg);
     position: absolute;
     bottom: 15px;
     left: 0;
@@ -663,7 +662,7 @@ a {
 }
 
 .bottom-block__container::after {
-    content: url(img/svg/wave2.svg);
+    content: url(https://raw.githubusercontent.com/kartsevnik/sup_jbay_zone/6091d56ad988c976d25dc6ceb5531f9a1b5ef170/img/svg/wave2.svg);
     position: absolute;
     bottom: 26px;
     left: 0;
@@ -712,7 +711,7 @@ a {
 }
 
 .pagamenti::after {
-    content: url(img/svg/cordLINE.svg);
+    content: url(https://raw.githubusercontent.com/kartsevnik/sup_jbay_zone/6091d56ad988c976d25dc6ceb5531f9a1b5ef170/img/svg/cordLINE.svg);
     position: absolute;
     bottom: -60px;
     left: 0;
@@ -779,7 +778,7 @@ a {
 }
 
 .spedizione::after {
-    content: url(img/svg/cordLINE.svg);
+    content: url(https://raw.githubusercontent.com/kartsevnik/sup_jbay_zone/6091d56ad988c976d25dc6ceb5531f9a1b5ef170/img/svg/cordLINE.svg);
     position: absolute;
     bottom: -120px;
     left: 0;
@@ -804,7 +803,7 @@ a {
 }
 
 .tracking::after {
-    content: url(img/svg/cordLINE.svg);
+    content: url(https://raw.githubusercontent.com/kartsevnik/sup_jbay_zone/6091d56ad988c976d25dc6ceb5531f9a1b5ef170/img/svg/cordLINE.svg);
     position: absolute;
     bottom: -120px;
     left: 0;
@@ -856,3 +855,5 @@ a {
     background-color: #2A2A2A;
     z-index: 1;
 }
+
+/* </style> */
