@@ -1,0 +1,1140 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        @import url(https://fonts.googleapis.com/css?family=Hammersmith+One:regular);
+        @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+        /* ==================================NULL================================================ */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        a,
+        a:visited {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: inherit;
+            font-size: inherit;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        body,
+        html {
+            height: 100%;
+            line-height: 1;
+            background-color: #343030;
+            color: #fff;
+            font-family: "Hammersmith One", "arial", sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            font-style: normal;
+        }
+
+        a {
+            text-decoration: underline;
+            color: #2CA9BC;
+        }
+
+        /* ================================================================ */
+        /* .wrapper::after {
+    content: url(img/svg/back-element-serf.svg);
+    position: absolute;
+    top: 0;
+    transform: translate(-10%, 0);
+    width: 100%;
+    height: 2436px;
+}
+
+
+
+[data-sun]::before {
+    content: url(img/svg/sun.svg);
+    position: absolute;
+    bottom: -180px;
+    right: -100px;
+    width: rem(226);
+    height: rem(227);
+    animation: rotate 30s infinite linear;
+    animation-name: sun;
+    z-index: 2;
+}
+
+@keyframes sun {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+} */
+
+        /* ======================================================================================= */
+        .wrapper {
+            min-height: 100%;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            margin: 0 auto;
+            position: relative;
+            /* padding: 0px 20px; */
+        }
+
+        [class*="__container"] {
+            margin: 0px auto;
+            max-width: 1440px;
+            padding: 0 20px;
+        }
+
+        .main {
+            flex: 1 1 auto;
+        }
+
+        .title {
+            font-size: 42px;
+            line-height: 52px;
+            padding-bottom: 20px;
+            text-align: center;
+            letter-spacing: 0.25em;
+        }
+
+        @media (max-width:1200px) {
+            .title {
+                font-size: 36px;
+                line-height: 42px;
+            }
+        }
+
+        @media (max-width:700px) {
+            .title {
+                font-size: 32px;
+                line-height: 42px;
+            }
+        }
+
+        .font-size32 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .padding {
+            padding-bottom: 24px;
+        }
+
+        /* ======================================================================================= */
+        .header {}
+
+        .header__menu {}
+
+        .menu {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            background: #2A2A2A;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 20px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        @media (max-width:800px) {
+            .menu {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width:400px) {
+            .menu {
+                grid-template-columns: 1fr;
+                justify-items: center;
+                font-size: 12px;
+            }
+        }
+
+        .logo {
+            padding: 5px 0;
+            align-self: center;
+        }
+
+        @media (max-width:800px) {
+            .logo {
+                display: none;
+            }
+        }
+
+        .menu__icon {}
+
+        .icon-menu {}
+
+        .menu__body {
+            padding: 15px 40px;
+            background: #2A2A2A;
+            /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 20px 40px rgba(0, 0, 0, 0.25); */
+            display: flex;
+            justify-content: end;
+            font-family: "Inter", "arial", sans-serif;
+        }
+
+        @media (max-width:400px) {
+            .menu__body {
+                padding: 15px 10px;
+
+            }
+        }
+
+        .menu__list {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            max-width: 1440px;
+            flex-wrap: wrap;
+        }
+
+        @media (max-width:1270px) {
+            .menu__list {
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                gap: 20px;
+                max-width: 1440px;
+                flex-wrap: wrap;
+            }
+        }
+
+
+
+        .menu__item {
+            text-align: center;
+        }
+
+        .menu__link {
+            font-weight: 700;
+            transition: all 0.3s ease 0s;
+        }
+
+        .menu__link:hover {
+            color: #fafdfd;
+        }
+
+
+
+        @media (max-width:1270px) {
+            .menu__link_logo {
+                display: none;
+            }
+        }
+
+        .menu__link_image img {
+            width: 75%;
+            align-self: center;
+        }
+
+
+
+        /* ======================================================================================= */
+
+        .main-section {
+            position: relative;
+        }
+
+        .main-section__container {
+            padding: 30px 30px 150px 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            position: relative;
+        }
+
+        @media (max-width:1200px) {
+            .main-section__container {
+                padding: 30px 50px 150px 50px;
+                grid-template-columns: 1fr;
+                gap: 0px;
+            }
+        }
+
+        @media (max-width:700px) {
+            .main-section__container {
+                padding: 30px 30px 150px 30px;
+            }
+        }
+
+        .main-section__container::before {
+            content: url(img/svg/wave2.svg);
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 123px;
+        }
+
+
+
+        .main-section__description {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        @media (max-width:700px) {
+            .main-section__description {
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+            }
+        }
+
+        .main-section__title {
+            letter-spacing: 0em;
+            align-self: center;
+        }
+
+        .main-section__text {
+            align-content: center;
+
+        }
+
+        @media (max-width:1200px) {
+            .main-section__text {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width:700px) {
+            .main-section__text {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .main-section__text_left {
+            line-height: 30px;
+        }
+
+        .main-section__text_left p {
+            position: relative;
+        }
+
+        .main-section__text_left h4 {
+            color: #2CA9BC;
+        }
+
+        .main-section__text_left p::after {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 10px;
+            width: 10px;
+            height: 10px;
+            background-color: #2CA9BC;
+            border-radius: 50%;
+        }
+
+        .main-section__text_right {
+            line-height: 30px;
+            text-align: end;
+            margin-top: -210px;
+        }
+
+        @media (max-width:1200px) {
+            .main-section__text_right {
+                text-align: end;
+                margin-top: 0px;
+                align-self: self-end;
+            }
+        }
+
+        @media (max-width:700px) {
+            .main-section__text_right {
+                text-align: left;
+                padding-left: 0px;
+                margin-top: 20px;
+                align-self: self-start;
+            }
+        }
+
+        .main-section__text_right p {
+            position: relative;
+        }
+
+        .main-section__text_right h4 {
+            color: #2CA9BC;
+            margin-right: -22px;
+        }
+
+        .main-section__text_right p::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            top: 10px;
+            width: 10px;
+            height: 10px;
+            background-color: #fcfcfc;
+            border-radius: 50%;
+        }
+
+        @media (max-width:700px) {
+            .main-section__text_right p::after {
+                content: '';
+                position: absolute;
+                left: -20px;
+                top: 10px;
+                width: 10px;
+                height: 10px;
+                background-color: #fcfcfc;
+                border-radius: 50%;
+            }
+        }
+
+        .main-section__image {
+            filter: drop-shadow(20px 20px 10px rgba(0, 0, 0, 0.25));
+            text-align: end;
+            align-self: center;
+        }
+
+        @media (max-width:1200px) {
+            .main-section__image {
+                padding-top: 50px;
+                text-align: center;
+                align-self: center;
+            }
+        }
+
+        .main-section__image img {
+            max-width: 600px;
+            max-height: 600px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: #2CA9BC 4px solid;
+        }
+
+
+
+        @media (max-width:700px) {
+            .main-section__image img {
+                width: 100%;
+            }
+        }
+
+        /* ======================================================================================= */
+
+        .descrizione {}
+
+        .descrizione__container {
+            padding: 25px 15px 150px 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            position: relative;
+        }
+
+        @media (max-width:1200px) {
+            .descrizione__container {
+                padding: 25px 15px 100px 15px;
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 0px;
+                position: relative;
+            }
+        }
+
+        .descrizione__container:after {
+            content: url(img/svg/wave-white.svg);
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            width: 100%;
+            height: 96px;
+        }
+
+        .descrizione__image {
+            filter: drop-shadow(20px 20px 10px rgba(0, 0, 0, 0.25));
+            text-align: end;
+            align-self: center;
+            margin-top: 50px;
+        }
+
+        @media (max-width:1200px) {
+            .descrizione__image {
+                text-align: center;
+            }
+        }
+
+        .descrizione__image img {
+            max-width: 700px;
+            max-height: 700px;
+            object-fit: cover;
+            border-radius: 20px;
+            outline: #fafdfd 4px solid;
+        }
+
+        @media (max-width:1200px) {
+            .descrizione__image img {
+                max-width: 100%;
+            }
+        }
+
+        .descrizione__description {
+            padding-top: 50px;
+        }
+
+        @media (max-width:400px) {
+            .descrizione__description {
+                padding-top: 25px;
+                font-size: 16px;
+            }
+        }
+
+        .descrizione__title {}
+
+        @media (max-width:400px) {
+            .descrizione__title {
+                font-size: 24px;
+            }
+        }
+
+        .descrizione__text {
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .descrizione__text p {
+            margin-bottom: 20px;
+        }
+
+        /* ======================================================================================= */
+
+        .benefici {}
+
+        .benefici__container {
+            padding: 30px 15px 160px 15px;
+            position: relative;
+        }
+
+        @media (max-width:700px) {
+            .benefici__container {
+                padding: 30px 15px 120px 15px;
+            }
+        }
+
+        .benefici__container:after {
+            content: url(img/svg/wave-white-reverse.svg);
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            width: 100%;
+            height: 96px;
+        }
+
+        .benefici__description {}
+
+        .benefici__title {
+            letter-spacing: 0;
+        }
+
+
+        .benefici__cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 35px;
+        }
+
+        @media (max-width:1000px) {
+            .benefici__cards {
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width:700px) {
+            .benefici__cards {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+        }
+
+        .benefici__card {
+            border: #fff 2px solid;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .card-benefici {}
+
+        .card-benefici__top {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            padding-bottom: 30px;
+        }
+
+        @media (max-width:700px) {
+            .card-benefici__top {
+                padding-bottom: 15px;
+            }
+        }
+
+        .card-benefici__image {
+            text-align: center;
+        }
+
+        .card-benefici__image img {
+            width: 80px;
+        }
+
+        .card-benefici__title {
+            color: #2CA9BC;
+            font-size: 32px;
+            align-self: center;
+            text-align: center;
+        }
+
+        .card-benefici__bottom-text {
+            text-align: center;
+        }
+
+        /* ======================================================================================= */
+
+
+
+        .garanzia {}
+
+        .garanzia__container {
+            padding: 50px 15px 120px 15px;
+            position: relative;
+        }
+
+        .garanzia__container:after {
+            content: url(img/svg/wave-azurro.svg);
+            position: absolute;
+            bottom: 15px;
+            left: 0;
+            width: 100%;
+            height: 96px;
+        }
+
+        .garanzia__description {}
+
+        .garanzia__title {}
+
+        .garanzia__text {
+            text-align: center;
+            line-height: 30px;
+        }
+
+        @media (max-width:700px) {
+            .garanzia__text {
+                font-size: 16px;
+            }
+        }
+
+        .garanzia__text p {
+            padding-bottom: 25px;
+        }
+
+        /* ======================================================================================= */
+
+
+        .bottom-block {}
+
+        .bottom-block__container {
+            padding: 50px 15px 0px 15px;
+            position: relative;
+        }
+
+        .bottom-block__container::after {
+            content: url(img/svg/wave2.svg);
+            position: absolute;
+            bottom: 26px;
+            left: 0;
+            width: 100%;
+            height: 96px;
+            z-index: 2;
+        }
+
+        .bottom-block__body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width:1200px) {
+            .bottom-block__body {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .bottom-block__image {
+            position: relative;
+            z-index: 2;
+            left: 80px;
+            bottom: -60px;
+        }
+
+        @media (max-width:1200px) {
+            .bottom-block__image {
+                display: none;
+            }
+        }
+
+        .bottom-block__description {
+            text-align: center;
+            align-self: center;
+        }
+
+
+        /* ======================================================================================= */
+
+        .bottom-block__pagamenti {}
+
+        .pagamenti {
+            position: relative;
+        }
+
+        .pagamenti::after {
+            content: url(img/svg/cordLINE.svg);
+            position: absolute;
+            bottom: -60px;
+            left: 0;
+            width: 100%;
+            height: 96px;
+            z-index: 2;
+        }
+
+        .pagamenti__body {
+            padding: 0 0 50px 0;
+        }
+
+
+        .pagamenti__payment {}
+
+        .pagamenti__payment_typelist {
+            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+        }
+
+        @media (max-width:700px) {
+            .pagamenti__payment_typelist {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pagamenti__payment_typelist li {
+            position: relative;
+            align-self: center;
+            width: 200px;
+            padding: 10px 0;
+            font-size: 24px;
+        }
+
+
+
+        .pagamenti__title {
+            letter-spacing: 0em;
+        }
+
+        .pagamenti__payment_typelist li::after {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 15px;
+            width: 10px;
+            height: 10px;
+            background-color: #c7a615;
+            border-radius: 50%;
+
+        }
+
+        .pagamenti__payment_typelist {}
+
+        /* ======================================================================================= */
+
+        .bottom-block__spedizione {}
+
+        .spedizione {
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .spedizione::after {
+            content: url(img/svg/cordLINE.svg);
+            position: absolute;
+            bottom: -120px;
+            left: 0;
+            width: 100%;
+            height: 96px;
+            z-index: 2;
+        }
+
+        .spedizione__title {}
+
+        .spedizione__text {
+            line-height: 30px;
+        }
+
+        /* ======================================================================================= */
+
+        .bottom-block__tracking {}
+
+        .tracking {
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .tracking::after {
+            content: url(img/svg/cordLINE.svg);
+            position: absolute;
+            bottom: -120px;
+            left: 0;
+            width: 100%;
+            height: 96px;
+            z-index: 2;
+        }
+
+        .tracking__title {}
+
+        .tracking__text {
+            line-height: 30px;
+        }
+
+        /* ======================================================================================= */
+
+        .bottom-block__contatti {}
+
+        .contatti {
+            margin-bottom: 60px;
+            line-height: 30px;
+            padding: 0 0 100px 0;
+        }
+
+        .contatti__title {}
+
+        .contatti__address {}
+
+        .contatti__email {}
+
+        /* ======================================================================================= */
+
+        .footer {}
+
+        .footer__menu {
+            position: relative;
+            padding: 20px 0;
+        }
+
+
+
+        .footer__menu::before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: -100px;
+            width: 100%;
+            height: 100px;
+            background-color: #2A2A2A;
+            z-index: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="header__menu menu">
+                <a href="https://www.ebay.it/usr/funsunforyou" class="logo"><img src="img/svg/logo.svg" alt=""></a>
+                <nav class="menu__body">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="#descrizione" class="menu__link">DESCRIZIONE</a></li>
+                        <li class="menu__item"><a href="#garanzia" class="menu__link">GARANZIA</a></li>
+                        <li class="menu__item"><a href="#pagamenti" class="menu__link">PAGAMENTI</a></li>
+
+                        <li class="menu__item"><a href="#spedizioni" class="menu__link">SPEDIZIONI</a></li>
+                        <li class="menu__item"><a href="#tracking" class="menu__link">TRACKING</a></li>
+                        <li class="menu__item"><a href="#contatti" class="menu__link">CONTATTI</a></li>
+                    </ul>
+                </nav>
+                <!-- <button type="button" class="menu__icon icon-menu"><span></span></button> -->
+            </div>
+        </header>
+
+        <main class="main">
+            <section class="main-section">
+                <div class="main-section__container">
+                    <div class="main-section__description">
+                        <h2 class="main-section__title title">JBAY.ZONE SUP AMURA H3 - 9'9''</h2>
+                        <div class="main-section__text">
+                            <div class="main-section__text_left">
+                                <h4>Caratteristiche:</h4>
+                                <p>Сondizione del prodotto: usato</p>
+                                <div>(Il prodotto è stato riparato da un fornitore di servizi autorizzato.)</div>
+                                <div class="padding"></div>
+
+                                <p>Materiale: PVC laminato con tecnologia DROP-STITCH</p>
+                                <p>Categoria: Beginner's Board</p>
+                                <p>Volume: 210L</p>
+                                <p>Spessore: 10cm</p>
+                                <p>Lunghezza: 297cm</p>
+                                <p>Larghezza: 81cm</p>
+                                <p>Peso: 7.2kg.</p>
+                                <p>Camere d'Aria: 1Pressione</p>
+                                <p>Gonfiaggio: 15psi / 1Bar</p>
+                                <p>Capacità di Carico - 99kg</p>
+
+                            </div>
+                            <div class="main-section__text_right">
+                                <h4>Compreso nel kit: </h4>
+                                <p>Sup gonfiabile </p>
+                                <p>Zaino</p>
+                                <p>Pompa manuale </p>
+                                <p>Pagaia </p>
+                                <p>Leash di sicurezza </p>
+                                <p>Pinna removibile </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-sun class="main-section__image"><img src="img/amura/sup-h3-amura-b-usata.jpg"
+                            alt="sup JBAY zone ">
+                    </div>
+                </div>
+            </section>
+
+            <section class="descrizione" id="descrizione">
+                <div class="descrizione__container">
+
+                    <div class="descrizione__image"><img src="img/amura/amura-spiaggia.jpg" alt="sup amura"></div>
+                    <div class="descrizione__description">
+                        <h2 class="descrizione__title title">Descrizione</h2>
+                        <div class="descrizione__text">
+                            <p>Il SUP-surf è uno sport salutare che permette di mantenere una buona forma sportiva e
+                                allo stesso tempo per piacere e relax.</p>
+                            <p>Amura H3 è la nostra tavola da SUP per principianti gonfiabile specifica per chi non ha
+                                esperienza a bordo di un SUP Board e chi non ha mai usato una tavola da SUP prima.</p>
+                            <p>
+                                La larghezza di 32″(81cm) fornisce una base solida per imparare i movimenti fondamentali
+                                a bordo di una Tavola da SUP per principianti. La lunghezza di 9’9”(297cm) da buona
+                                manovrabilità al SUP nelle diverse condizioni acquatiche e una discreta velocità. Il
+                                Volume di 210L rende ideale la tavola da SUP per principianti Amura H3 per tutta la
+                                famiglia, per paddlers di massimo 80Kg.</p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section class="benefici" id="benefici">
+                <div class="benefici__container">
+
+                    <div class="benefici__title title">I benefici del Imbarco SUP</div>
+                    <div class="benefici__description">
+                        <div class="benefici__cards">
+                            <div class="benefici__card card-benefici">
+                                <div class="card-benefici__top">
+                                    <div class="card-benefici__image"><img src="img/svg/cuore.png" alt="cuore"></div>
+                                    <div class="card-benefici__title">Salute del cuore
+                                    </div>
+                                </div>
+                                <div class="card-benefici__bottom-text">Miglioramento del sistema cardiovascolare
+                                </div>
+                            </div>
+
+                            <div class="benefici__card card-benefici">
+                                <div class="card-benefici__top">
+                                    <div class="card-benefici__image"><img src="img/svg/peso.png" alt="peso"></div>
+                                    <div class="card-benefici__title">Perdita di peso
+
+                                    </div>
+                                </div>
+                                <div class="card-benefici__bottom-text">Sbarazzarsi dei chili di troppo
+
+                                </div>
+                            </div>
+
+                            <div class="benefici__card card-benefici">
+                                <div class="card-benefici__top">
+                                    <div class="card-benefici__image"><img src="img/svg/psicologico.png"
+                                            alt="psicologico"></div>
+                                    <div class="card-benefici__title">Stato psicologico
+                                    </div>
+                                </div>
+                                <div class="card-benefici__bottom-text">Miglioramento dello stato psicologico, perché
+                                    l'acqua tranquillizza e distrae
+                                </div>
+                            </div>
+
+                            <div class="benefici__card card-benefici">
+                                <div class="card-benefici__top">
+                                    <div class="card-benefici__image"><img src="img/svg/corpo.png" alt="corpo"></div>
+                                    <div class="card-benefici__title">Corpo
+                                    </div>
+                                </div>
+                                <div class="card-benefici__bottom-text">Durante il canottaggio, tutti i muscoli sono
+                                    interessati dalla tavola e iniziano a lavorare a pieno regime. Si tratta di mani,
+                                    piedi e addominali
+
+                                </div>
+                            </div>
+
+                            <div class="benefici__card card-benefici">
+                                <div class="card-benefici__top">
+                                    <div class="card-benefici__image"><img src="img/svg/allenamento.png"
+                                            alt="allenamento"></div>
+                                    <div class="card-benefici__title">Equilibrio
+
+                                    </div>
+                                </div>
+                                <div class="card-benefici__bottom-text">Allenare l'apparato vestibolare sulla linfa è
+                                    uno dei vantaggi che si possono ottenere scegliendo questo sport.
+
+
+                                </div>
+                            </div>
+
+                            <div class="benefici__card card-benefici">
+                                <div class="card-benefici__top">
+                                    <div class="card-benefici__image"><img src="img/svg/basso.png" alt="basso"></div>
+                                    <div class="card-benefici__title">Basso rischio di lesioni
+                                    </div>
+                                </div>
+                                <div class="card-benefici__bottom-text">Su SUP è quasi impossibile farsi male,
+                                    l'importante è trattarsi con cura, monitorare le previsioni meteo e osservare tutte
+                                    le precauzioni.
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="garanzia" id="garanzia">
+                <div class="garanzia__container">
+                    <div class="garanzia__description">
+                        <div class="garanzia__title title">Garanzia</div>
+                        <div class="garanzia__text">
+
+
+
+                            <p>1. Tutti i prodotti usati sono coperti dalla garanzia di 12 mesi per i difetti di
+                                conformità, che il Codice del Consumo garantisce ai soli clienti Consumatori.
+                                Il consumatore deve denunciare i difetti e i vizi al venditore entro 2 mesi dalla
+                                scoperta. Il difetto deve essere denunciato al venditore entro 2 mesi dalla scoperta,
+                                inviando una lettera di conferma (raccomandata con ricevuta di ritorno). Non è
+                                sufficiente confermare il difetto via e-mail o telefono. </p>
+
+                            <p>2. Nei casi in cui l’applicazione delle garanzie preveda la restituzione del prodotto, il
+                                bene dovrà essere restituito dal Cliente nella confezione originale, completa in tutte
+                                le
+                                sue parti (compresi imballo ed eventuale documentazione e dotazione accessoria: manuali,
+                                cavi, ecc...).</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section class="bottom-block">
+                <div class="bottom-block__container">
+                    <div class="bottom-block__body">
+                        <div class="bottom-block__image"><img src="img/svg/serf-back.svg" alt="serf sup"></div>
+                        <div class="bottom-block__description">
+                            <div class="bottom-block__pagamenti pagamenti" id="pagamenti">
+                                <div class="pagamenti__body">
+                                    <div class="pagamenti__title title">I <span class="font-size32">PAGAMENTI</span>
+                                        ACCETTATI DA
+                                        EBAY
+                                        SONO:
+                                    </div>
+                                    <div class="pagamenti__payment">
+                                        <ul class="pagamenti__payment_typelist">
+                                            <li>PAYPAL2</li>
+                                            <li>Carta di Credito</li>
+                                            <li>Apple Pay</li>
+                                            <li>Google Pay</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="bottom-block__spedizione spedizione" id="spedizione">
+                                <div class="spedizione__title title">SPEDIZIONE</div>
+                                <div class="spedizione__text">Per la Legge Italiana, “la merce viaggia a rischio/carico
+                                    dell’acquirente”, pertanto quando ricevete una spedizione controllate che
+                                    l’imballaggio
+                                    sia integro, non tagliato o non manomesso.Le tempistiche di consegna sono da
+                                    considerarsi valide solo per il 90% del territorio italiano. Isole e zone remote
+                                    vengono
+                                    servite in 36/96h lavorative.</div>
+                            </div>
+
+                            <div class="bottom-block__tracking tracking" id="tracking">
+                                <div class="tracking__title title">TRACKING</div>
+                                <div class="tracking__text">Non appena il vostro ordine viene spedito, nell’apposito
+                                    spazio
+                                    verrà caricato il codice di spedizione del vostro ordine.In questo modo potete
+                                    tenerlo
+                                    sotto controllo e verificare costantemente o stato di consegna.</div>
+                            </div>
+
+                            <div class="bottom-block__contatti contatti" id="contatti">
+                                <div class="contatti__title title">CONTATTI</div>
+                                <div class="contatti__address">Italy, LEGNANO (MI), 20025</div>
+                                <div class="contatti__email">E-MAIL:
+                                    <a href="mailto: mkdiya20@gmail.com">mkdiya20@gmail.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__menu menu">
+                <a href="https://www.ebay.it/usr/funsunforyou" class="logo"><img src="img/svg/logo.svg" alt=""></a>
+                <nav class="menu__body">
+                    <ul class="menu__list">
+                        <li class="menu__item"><a href="#descrizione" class="menu__link">DESCRIZIONE</a></li>
+                        <li class="menu__item"><a href="#garanzia" class="menu__link">GARANZIA</a></li>
+                        <li class="menu__item"><a href="#pagamenti" class="menu__link">PAGAMENTI</a></li>
+
+                        <li class="menu__item"><a href="#spedizioni" class="menu__link">SPEDIZIONI</a></li>
+                        <li class="menu__item"><a href="#tracking" class="menu__link">TRACKING</a></li>
+                        <li class="menu__item"><a href="#contatti" class="menu__link">CONTATTI</a></li>
+                    </ul>
+                </nav>
+                <!-- <button type="button" class="menu__icon icon-menu"><span></span></button> -->
+            </div>
+        </footer>
+    </div>
+</body>
