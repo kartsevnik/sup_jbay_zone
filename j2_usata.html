@@ -1,0 +1,1241 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        /* ==================================NULL================================================ */
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            color: inherit;
+        }
+
+        a,
+        a:visited {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-weight: inherit;
+            font-size: inherit;
+        }
+
+        img {
+            vertical-align: top;
+        }
+
+        body,
+        html {
+            color: #ffffff;
+            font-family: "Hammersmith One", "arial", sans-serif;
+            font-weight: 400;
+            font-size: 20px;
+            font-style: normal;
+            background-color: #343030;
+            /* background-color: #fff; */
+
+        }
+
+        a {
+            text-decoration: underline;
+            color: #2CA9BC;
+        }
+
+        /* ======================================================================================= */
+
+        [class*="__container"] {
+            margin: 0px auto;
+            max-width: 1440px;
+            padding: 0 20px;
+            border-bottom: #2CA9BC 4px solid;
+        }
+
+        @media (max-width: 1200px) {
+            [class*="__container"] {
+                padding: 0px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            [class*="__container"] {
+                border-bottom: #2CA9BC 0px solid;
+            }
+        }
+
+        .title {
+            font-size: 42px;
+            line-height: 52px;
+            padding-bottom: 20px;
+            text-align: center;
+            letter-spacing: 0.25em;
+        }
+
+        @media (max-width:1200px) {
+            .title {
+                font-size: 36px;
+                line-height: 42px;
+            }
+        }
+
+        @media (max-width:700px) {
+            .title {
+                font-size: 32px;
+                line-height: 42px;
+            }
+        }
+
+        .font-size32 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .padding {
+            padding-bottom: 24px;
+        }
+
+        /* =============================TABS=================================================== */
+
+        @media (min-width: 600px) {
+            body {
+                padding: 0px 0px;
+            }
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 0px 0px;
+            }
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        p {
+            margin-top: 10px;
+            margin-bottom: 0;
+            padding: 0;
+            font-size: 20px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 700px) {
+            p {
+                margin-top: 0px;
+            }
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            max-width: 100%;
+            background: #343030;
+        }
+
+        .input {
+            position: absolute;
+            opacity: 0;
+        }
+
+        .label {
+            width: 100%;
+            padding: 20px 30px;
+            background: #2CA9BC;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 18px;
+            color: #f5f5f5;
+            border-right: 0.125rem solid #343030;
+            transition: background 0.1s, color 0.1s;
+            text-align: center;
+        }
+
+
+
+        @media (min-width: 1000px) {
+            #tab-1 {
+                border-left: 0.125rem solid #343030;
+            }
+        }
+
+        .label:hover {
+            background: #d8d8d8;
+        }
+
+        .label:active {
+            background: #ccc;
+        }
+
+        .input:focus+.label {
+            z-index: 1;
+        }
+
+        .input:checked+.label {
+            background: #fff;
+            color: #2A2A2A;
+        }
+
+        .panel {
+            display: none;
+            padding: 20px 30px 20px 30px;
+            background: #343030;
+        }
+
+        @media (min-width: 1000px) {
+            .label {
+                width: auto;
+            }
+        }
+
+        @media (max-width: 1200px) {
+            .label {
+                padding: 20px 17px;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .label {
+                border-bottom: 0.125rem solid #343030;
+            }
+        }
+
+        @media (min-width: 1000px) {
+            .panel {
+                order: 99;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .panel {
+                padding: 0px 10px;
+            }
+        }
+
+        .input:checked+.label+.panel {
+            display: block;
+        }
+
+        /* =============================TABS END=================================================== */
+        .logo {
+            padding: 5px 0;
+            align-self: center;
+        }
+
+        @media (max-width:340px) {
+            .logo img {
+                width: 80%;
+            }
+        }
+
+
+        /* ======================================================================================= */
+
+        .main-section {}
+
+        .main-section__container {
+            padding: 0px 0px 40px 0px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            position: relative;
+            border-bottom: #2CA9BC 0px solid;
+
+        }
+
+        @media (max-width:1000px) {
+            .main-section__container {
+                padding: 10px 50px 50px 50px;
+                grid-template-columns: 1fr;
+                gap: 0px;
+                border-bottom: #2CA9BC 0px solid;
+            }
+        }
+
+        @media (max-width:700px) {
+            .main-section__container {
+                padding: 30px 30px 100px 30px;
+            }
+        }
+
+
+        .main-section__description {
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+
+        .main-section__title {
+            letter-spacing: 0em;
+            align-self: center;
+        }
+
+        @media (max-width:1395px) {
+            .main-section__title {
+                font-size: 36px;
+            }
+        }
+
+        @media (max-width:1298px) {
+            .main-section__title {
+                font-size: 28px;
+            }
+        }
+
+        @media (max-width:530px) {
+            .main-section__title {
+                font-size: 24px;
+            }
+        }
+
+        .main-section__text {
+            align-content: center;
+            font-size: 20px;
+
+
+        }
+
+        @media (max-width:1200px) {
+            .main-section__text {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width:1000px) {
+            .main-section__text {
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width:700px) {
+            .main-section__text {
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+        .main-section__text_left {
+            line-height: 30px;
+        }
+
+        @media (max-width:700px) {
+            .main-section__text_left {
+                line-height: 30px;
+            }
+        }
+
+        .main-section__text_left p {
+            position: relative;
+        }
+
+        .main-section__text_left h4 {
+            color: #2CA9BC;
+        }
+
+        .main-section__text_left p::after {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 10px;
+            width: 10px;
+            height: 10px;
+            background-color: #2CA9BC;
+            border-radius: 50%;
+        }
+
+        .main-section__text_right {
+            line-height: 30px;
+            text-align: end;
+            margin-top: -330px;
+        }
+
+        @media (max-width:1200px) {
+            .main-section__text_right {
+                text-align: end;
+                margin-top: 0px;
+            }
+        }
+
+        @media (max-width:700px) {
+            .main-section__text_right {
+                text-align: left;
+                padding-left: 0px;
+                margin-top: 20px;
+            }
+        }
+
+        .main-section__text_right p {
+            position: relative;
+        }
+
+        .main-section__text_right h4 {
+            color: #2CA9BC;
+            margin-right: -22px;
+        }
+
+        .main-section__text_right p::after {
+            content: '';
+            position: absolute;
+            right: -20px;
+            top: 10px;
+            width: 10px;
+            height: 10px;
+            background-color: #fcfcfc;
+            border-radius: 50%;
+        }
+
+        @media (max-width:700px) {
+            .main-section__text_right p::after {
+                content: '';
+                position: absolute;
+                left: -20px;
+                top: 10px;
+                width: 10px;
+                height: 10px;
+                background-color: #fcfcfc;
+                border-radius: 50%;
+            }
+        }
+
+        .main-section__image {
+            filter: drop-shadow(20px 20px 10px rgba(0, 0, 0, 0.25));
+            text-align: end;
+            align-content: end;
+            padding-top: 25px;
+        }
+
+        @media (max-width:1200px) {
+            .main-section__image {
+                padding-top: 50px;
+                text-align: center;
+                align-self: flex-start;
+            }
+        }
+
+        .main-section__image img {
+            max-width: 600px;
+            max-height: 600px;
+            object-fit: cover;
+            border-radius: 20px;
+            border: #2CA9BC 4px solid;
+        }
+
+
+
+        @media (max-width:1200px) {
+            .main-section__image img {
+                width: 100%;
+            }
+        }
+
+        /* ======================================================================================= */
+
+        .descrizione {}
+
+        .descrizione__container {
+            padding: 0px 15px 150px 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            position: relative;
+        }
+
+        @media (max-width:1200px) {
+            .descrizione__container {
+                padding: 0px 15px 10px 15px;
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 0px;
+                position: relative;
+            }
+        }
+
+
+        .descrizione__image {
+            filter: drop-shadow(20px 20px 10px rgba(0, 0, 0, 0.25));
+            text-align: end;
+            align-self: center;
+            margin-top: 50px;
+        }
+
+        @media (max-width:1200px) {
+            .descrizione__image {
+                text-align: center;
+            }
+        }
+
+        .descrizione__image img {
+            max-width: 700px;
+            max-height: 700px;
+            object-fit: cover;
+            border-radius: 20px;
+            outline: #fafdfd 4px solid;
+        }
+
+        @media (max-width:1300px) {
+            .descrizione__image img {
+                max-width: 100%;
+            }
+        }
+
+        .descrizione__description {
+            padding-top: 20px;
+        }
+
+        @media (max-width:400px) {
+            .descrizione__description {
+                padding-top: 25px;
+                font-size: 16px;
+            }
+        }
+
+        @media (max-width:1000px) {
+            .descrizione__title {
+                display: none;
+            }
+        }
+
+        @media (max-width:400px) {
+            .descrizione__title {
+                font-size: 24px;
+            }
+        }
+
+        .descrizione__text {
+            text-align: center;
+            line-height: 30px;
+        }
+
+        .descrizione__text p {
+            margin-bottom: 20px;
+        }
+
+        /* ======================================================================================= */
+
+        .benefici {}
+
+        .benefici__container {
+            padding: 30px 15px 100px 15px;
+            position: relative;
+        }
+
+        @media (max-width:700px) {
+            .benefici__container {
+                padding: 30px 15px 50px 15px;
+            }
+        }
+
+        .benefici__description {}
+
+        .benefici__title {
+            letter-spacing: 0;
+        }
+
+
+        .benefici__cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 35px;
+        }
+
+        @media (max-width:1000px) {
+            .benefici__cards {
+                grid-template-columns: 1fr 1fr;
+                gap: 25px;
+            }
+        }
+
+        @media (max-width:700px) {
+            .benefici__cards {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+        }
+
+        .benefici__card {
+            border: #fff 2px solid;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .card-benefici {}
+
+        .card-benefici__top {
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            padding-bottom: 30px;
+        }
+
+        @media (max-width:700px) {
+            .card-benefici__top {
+                padding-bottom: 15px;
+            }
+        }
+
+        .card-benefici__image {
+            text-align: center;
+        }
+
+        .card-benefici__image img {
+            width: 80px;
+        }
+
+        .card-benefici__title {
+            color: #2CA9BC;
+            font-size: 32px;
+            align-self: center;
+            text-align: center;
+        }
+
+        .card-benefici__bottom-text {
+            text-align: center;
+        }
+
+        /* ======================================================================================= */
+
+        .garanzia {}
+
+        .garanzia__container {
+            padding: 30px 15px 120px 15px;
+            position: relative;
+        }
+
+        .garanzia__description {}
+
+        .garanzia__title {
+            padding-top: 25px;
+        }
+
+        @media (max-width:1000px) {
+            .garanzia__title {
+                display: none;
+            }
+        }
+
+
+        .garanzia__text {
+            text-align: center;
+            line-height: 30px;
+        }
+
+        @media (max-width:700px) {
+            .garanzia__text {
+                font-size: 16px;
+            }
+        }
+
+        .garanzia__text p {
+            padding-bottom: 25px;
+        }
+
+        /* ======================================================================================= */
+
+
+        .bottom-block {}
+
+        .bottom-block__container {
+            padding: 20px 15px 0px 15px;
+            position: relative;
+        }
+
+        .bottom-block__body {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media (max-width:1200px) {
+            .bottom-block__body {
+                display: grid;
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .bottom-block__image {
+            position: relative;
+            z-index: 2;
+            left: 100px;
+            bottom: -20px;
+        }
+
+        .bottom-block__image img {
+            width: 50%;
+        }
+
+        @media (max-width:1200px) {
+            .bottom-block__image {
+                display: none;
+            }
+        }
+
+        .bottom-block__description {
+            text-align: center;
+            align-self: center;
+        }
+
+
+        /* ======================================================================================= */
+
+        .bottom-block__pagamenti {}
+
+        .pagamenti {
+            position: relative;
+        }
+
+        .pagamenti__body {
+            padding: 20px 0 50px 0;
+        }
+
+
+        .pagamenti__payment {}
+
+        .pagamenti__payment_typelist {
+            text-align: center;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            justify-items: center;
+        }
+
+        @media (max-width:700px) {
+            .pagamenti__payment_typelist {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .pagamenti__payment_typelist li {
+            position: relative;
+            align-self: center;
+            width: 200px;
+            padding: 10px 0;
+            font-size: 24px;
+        }
+
+
+
+        .pagamenti__title {
+            letter-spacing: 0em;
+        }
+
+        .pagamenti__payment_typelist li::after {
+            content: '';
+            position: absolute;
+            left: -20px;
+            top: 15px;
+            width: 10px;
+            height: 10px;
+            background-color: #c7a615;
+            border-radius: 50%;
+
+        }
+
+        .pagamenti__payment_typelist {}
+
+        /* ======================================================================================= */
+
+        .bottom-block__spedizione {}
+
+        .spedizione {
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+
+        @media (max-width:1000px) {
+            .spedizione__title {
+                display: none;
+            }
+        }
+
+        .spedizione__text {
+            line-height: 30px;
+        }
+
+        /* ======================================================================================= */
+
+        .bottom-block__tracking {}
+
+        .tracking {
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .tracking__title {}
+
+        .tracking__text {
+            line-height: 30px;
+        }
+
+        /* ======================================================================================= */
+
+        .bottom-block__contatti {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .contatti {
+            line-height: 30px;
+            position: relative;
+        }
+
+        @media (max-width:700px) {
+            .contatti {
+                margin-bottom: 0px;
+            }
+        }
+
+        @media (max-width:1000px) {
+            .contatti__title {
+                display: none;
+            }
+        }
+
+
+        .contatti__ourFirm {
+            display: flex;
+            justify-content: center;
+            text-align: center;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        @media (max-width:700px) {
+            .contatti__ourFirm {
+                flex-direction: column;
+            }
+        }
+
+        .contatti__address {
+            padding-bottom: 25px;
+        }
+
+        .contatti__email {}
+
+        /* ======================================================================================= */
+
+        .footer {}
+
+        .footer__menu {
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .footer__menu::before {
+            content: '';
+            position: absolute;
+            left: 0px;
+            top: -100px;
+            width: 100%;
+            height: 100px;
+            background-color: #2A2A2A;
+            z-index: 1;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <main class="main">
+            <div class="main__container">
+
+
+                <div class="tabs">
+                    <!-- PRODOTTO -->
+                    <input class="input" name="tabs" type="radio" id="tab-1" checked="checked" />
+                    <label class="label" for="tab-1" id="tab-1">PRODOTTO</label>
+                    <div class="panel">
+                        <section class="main-section">
+                            <div class="main-section__container">
+                                <div class="main-section__description">
+                                    <h2 class="main-section__title title">SUP Gonfiabile Comet J2 – 10’6”</h2>
+                                    <div class="main-section__text">
+                                        <div class="main-section__text_left">
+                                            <h4>Caratteristiche:</h4>
+                                            <p>Сondizione del prodotto: usato</p>
+                                            <div>(Il prodotto è stato riparato da un fornitore di servizi
+                                                autorizzato.)
+                                            </div>
+                                            <div class="padding"></div>
+
+                                            <p>Materiale: PVC laminato con tecnologia DROP-STITCH</p>
+                                            <p>Categoria: Beginner's Board</p>
+                                            <p>Volume: 304L</p>
+                                            <p>Spessore: 15cm</p>
+                                            <p>Lunghezza: 320cm</p>
+                                            <p>Larghezza: 81cm</p>
+                                            <p>Peso: 11.1kg.</p>
+                                            <p>Camere d'Aria: 1Pressione</p>
+                                            <p>Gonfiaggio: 15psi / 1Bar</p>
+                                            <p>Capacità di Carico - 145kg</p>
+
+                                        </div>
+                                        <div class="main-section__text_right">
+                                            <h4>Compreso nel kit: </h4>
+                                            <p>Sup gonfiabile </p>
+                                            <p>Zaino</p>
+                                            <p>Pompa manuale </p>
+                                            <p>Pagaia </p>
+                                            <p>Leash di sicurezza </p>
+                                            <p>Pinna removibile </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-sun class="main-section__image"><img
+                                        src="https://raw.githubusercontent.com/kartsevnik/sup_jbay_zone/main/img/j2/j2.jpg"
+                                        alt="sup JBAY zone">
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- DESCRIZIONE -->
+                    <input class="input" name="tabs" type="radio" id="tab-2" />
+                    <label class="label" for="tab-2">DESCRIZIONE</label>
+                    <div class="panel">
+                        <section class="descrizione" id="descrizione">
+                            <div class="descrizione__container">
+
+                                <div class="descrizione__image"><img
+                                        src="https://raw.githubusercontent.com/kartsevnik/sup_jbay_zone/main/img/j2/DSC_5635.webp"
+                                        alt="sup j2"></div>
+                                <div class="descrizione__description">
+                                    <h2 class="descrizione__title title">Descrizione</h2>
+                                    <div class="descrizione__text">
+                                        <p>Il SUP-surf è uno sport salutare che permette di mantenere una buona
+                                            forma
+                                            sportiva e
+                                            allo stesso tempo per piacere e relax.</p>
+                                        <p>Tra i SUP Tuttofare, Comet J2 è sicuramente il più rappresentativo per
+                                            JBAY.ZONE. La larghezza di 32″ (81cm) garantisce ottima stabilità, di
+                                            conseguenza, anche un ottimo spazio a disposizione del rider per spostarsi
+                                            lungo il deck e trovare la posizione ideale per pagaiare al meglio. Il SUP
+                                            Tuttofare Comet J2 riesce a scivolare agevolmente sull’acqua e la lunghezza
+                                            di 10’6” (320cm) è un compromesso ottimo tra velocità e maneggevolezza. Il
+                                            Volume occupato dal SUP Tuttofare Comet J2 è di 304L, quindi, ottimo
+                                            supporto al peso garantito e possibilità di pagaiare senza problemi anche
+                                            per supper pesanti, fino a 100Kg. lo Stand up Paddle Comet J2 riesce,
+                                            inoltre, a trasportare fino a 145Kg di peso complessivo. Leggerissimo e
+                                            facilmente manovrabile, Comet J2 è uno dei migliori SUP Tuttofare per
+                                            iniziare.</p>
+
+                                        <a href="https://www.jbay.zone/prodotto/sup-gonfiabile-comet-j2/">Link
+                                            al
+                                            modello sul sito
+                                            ufficiale del produttore Jbay Zone</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- BENEFICI -->
+                    <input class="input" name="tabs" type="radio" id="tab-3" />
+                    <label class="label" for="tab-3">BENEFICI</label>
+                    <div class="panel">
+                        <section class="benefici" id="benefici">
+                            <div class="benefici__container">
+
+                                <div class="benefici__title title">I benefici del Imbarco SUP</div>
+                                <div class="benefici__description">
+                                    <div class="benefici__cards">
+                                        <div class="benefici__card card-benefici">
+                                            <div class="card-benefici__top">
+                                                <div class="card-benefici__image"><img
+                                                        src="https://github.com/kartsevnik/sup_jbay_zone/blob/main/img/svg/cuore.png?raw=true"
+                                                        alt="cuore"></div>
+                                                <div class="card-benefici__title">Salute del cuore
+                                                </div>
+                                            </div>
+                                            <div class="card-benefici__bottom-text">Miglioramento del sistema
+                                                cardiovascolare
+                                            </div>
+                                        </div>
+
+                                        <div class="benefici__card card-benefici">
+                                            <div class="card-benefici__top">
+                                                <div class="card-benefici__image"><img
+                                                        src="https://github.com/kartsevnik/sup_jbay_zone/blob/main/img/svg/peso.png?raw=true"
+                                                        alt="peso"></div>
+                                                <div class="card-benefici__title">Perdita di peso
+
+                                                </div>
+                                            </div>
+                                            <div class="card-benefici__bottom-text">Sbarazzarsi dei chili di
+                                                troppo
+
+                                            </div>
+                                        </div>
+
+                                        <div class="benefici__card card-benefici">
+                                            <div class="card-benefici__top">
+                                                <div class="card-benefici__image"><img
+                                                        src="https://github.com/kartsevnik/sup_jbay_zone/blob/main/img/svg/psicologico.png?raw=true"
+                                                        alt="psicologico"></div>
+                                                <div class="card-benefici__title">Stato psicologico
+                                                </div>
+                                            </div>
+                                            <div class="card-benefici__bottom-text">Miglioramento dello stato
+                                                psicologico, perché
+                                                l'acqua tranquillizza e distrae
+                                            </div>
+                                        </div>
+
+                                        <div class="benefici__card card-benefici">
+                                            <div class="card-benefici__top">
+                                                <div class="card-benefici__image"><img
+                                                        src="https://github.com/kartsevnik/sup_jbay_zone/blob/main/img/svg/corpo.png?raw=true"
+                                                        alt="corpo"></div>
+                                                <div class="card-benefici__title">Corpo
+                                                </div>
+                                            </div>
+                                            <div class="card-benefici__bottom-text">Durante il canottaggio,
+                                                tutti i
+                                                muscoli sono
+                                                interessati dalla tavola e iniziano a lavorare a pieno regime.
+                                                Si
+                                                tratta
+                                                di mani,
+                                                piedi e addominali
+
+                                            </div>
+                                        </div>
+
+                                        <div class="benefici__card card-benefici">
+                                            <div class="card-benefici__top">
+                                                <div class="card-benefici__image"><img
+                                                        src="https://github.com/kartsevnik/sup_jbay_zone/blob/main/img/svg/allenamento.png?raw=true"
+                                                        alt="allenamento"></div>
+                                                <div class="card-benefici__title">Equilibrio
+
+                                                </div>
+                                            </div>
+                                            <div class="card-benefici__bottom-text">Allenare l'apparato
+                                                vestibolare
+                                                sulla linfa è
+                                                uno dei vantaggi che si possono ottenere scegliendo questo
+                                                sport.
+
+
+                                            </div>
+                                        </div>
+
+                                        <div class="benefici__card card-benefici">
+                                            <div class="card-benefici__top">
+                                                <div class="card-benefici__image"><img
+                                                        src="https://github.com/kartsevnik/sup_jbay_zone/blob/main/img/svg/basso.png?raw=true"
+                                                        alt="basso">
+                                                </div>
+                                                <div class="card-benefici__title">Basso rischio di lesioni
+                                                </div>
+                                            </div>
+                                            <div class="card-benefici__bottom-text">Su SUP è quasi impossibile
+                                                farsi
+                                                male,
+                                                l'importante è trattarsi con cura, monitorare le previsioni
+                                                meteo e
+                                                osservare tutte
+                                                le precauzioni.
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- GARANZIA -->
+                    <input class="input" name="tabs" type="radio" id="tab-4" />
+                    <label class="label" for="tab-4">GARANZIA</label>
+                    <div class="panel">
+                        <section class="garanzia" id="garanzia">
+                            <div class="garanzia__container">
+                                <div class="garanzia__description">
+                                    <div class="garanzia__title title">Garanzia</div>
+                                    <div class="garanzia__text">
+                                        <p>1. Tutti i prodotti usati sono coperti dalla garanzia di 12 mesi per
+                                            i
+                                            difetti di
+                                            conformità, che il Codice del Consumo garantisce ai soli clienti
+                                            Consumatori.
+                                            Il consumatore deve denunciare i difetti e i vizi al venditore entro
+                                            2
+                                            mesi
+                                            dalla
+                                            scoperta. Il difetto deve essere denunciato al venditore entro 2
+                                            mesi
+                                            dalla
+                                            scoperta,
+                                            inviando una lettera di conferma (raccomandata con ricevuta di
+                                            ritorno).
+                                            Non
+                                            è
+                                            sufficiente confermare il difetto via e-mail o telefono. </p>
+
+                                        <p>2. Nei casi in cui l’applicazione delle garanzie preveda la
+                                            restituzione
+                                            del
+                                            prodotto, il
+                                            bene dovrà essere restituito dal Cliente nella confezione originale,
+                                            completa in tutte
+                                            le
+                                            sue parti (compresi imballo ed eventuale documentazione e dotazione
+                                            accessoria: manuali,
+                                            cavi, ecc...).</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- PAGAMENTI -->
+                    <input class="input" name="tabs" type="radio" id="tab-5" />
+                    <label class="label" for="tab-5">PAGAMENTI</label>
+                    <div class="panel">
+                        <section class="bottom-block">
+                            <div class="bottom-block__container">
+                                <div class="bottom-block__body">
+                                    <div class="bottom-block__image"><img
+                                            src="https://raw.githubusercontent.com/kartsevnik/sup_jbay_zone/6091d56ad988c976d25dc6ceb5531f9a1b5ef170/img/svg/serf-back.svg"
+                                            alt="serf sup"></div>
+                                    <div class="bottom-block__description">
+                                        <div class="bottom-block__pagamenti pagamenti" id="pagamenti">
+                                            <div class="pagamenti__body">
+                                                <div class="pagamenti__title title">I <span
+                                                        class="font-size32">PAGAMENTI</span>
+                                                    ACCETTATI DA
+                                                    EBAY
+                                                    SONO:
+                                                </div>
+                                                <div class="pagamenti__payment">
+                                                    <ul class="pagamenti__payment_typelist">
+                                                        <li>PAYPAL2</li>
+                                                        <li>Carta di Credito</li>
+                                                        <li>Apple Pay</li>
+                                                        <li>Google Pay</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- SPEDIZIONI -->
+                    <input class="input" name="tabs" type="radio" id="tab-6" />
+                    <label class="label" for="tab-6">SPEDIZIONE</label>
+                    <div class="panel">
+                        <section class="bottom-block">
+                            <div class="bottom-block__container">
+                                <div class="bottom-block__body">
+                                    <div class="bottom-block__image"><img
+                                            src="https://raw.githubusercontent.com/kartsevnik/sup_jbay_zone/6091d56ad988c976d25dc6ceb5531f9a1b5ef170/img/svg/serf-back.svg"
+                                            alt="serf sup"></div>
+                                    <div class="bottom-block__description">
+                                        <div class="bottom-block__spedizione spedizione" id="spedizione">
+                                            <div class="spedizione__title title">SPEDIZIONE</div>
+                                            <div class="spedizione__text">Per la Legge Italiana, “la merce
+                                                viaggia a
+                                                rischio/carico
+                                                dell’acquirente”, pertanto quando ricevete una spedizione
+                                                controllate
+                                                che
+                                                l’imballaggio
+                                                sia integro, non tagliato o non manomesso.Le tempistiche di
+                                                consegna
+                                                sono da
+                                                considerarsi valide solo per il 90% del territorio italiano.
+                                                Isole e
+                                                zone remote
+                                                vengono
+                                                servite in 36/96h lavorative.</div>
+                                        </div>
+                                        <div class="bottom-block__tracking tracking" id="tracking">
+                                            <div class="tracking__title title">TRACKING</div>
+                                            <div class="tracking__text">Non appena il vostro ordine viene
+                                                spedito,
+                                                nell’apposito
+                                                spazio
+                                                verrà caricato il codice di spedizione del vostro ordine.In
+                                                questo
+                                                modo
+                                                potete
+                                                tenerlo
+                                                sotto controllo e verificare costantemente o stato di consegna.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- CONTATTI -->
+                    <input class="input" name="tabs" type="radio" id="tab-7" />
+                    <label class="label" for="tab-7">CONTATTI</label>
+                    <div class="panel">
+                        <section class="bottom-block">
+                            <div class="bottom-block__container">
+                                <div class="bottom-block__body">
+                                    <div class="bottom-block__image"><img
+                                            src="https://raw.githubusercontent.com/kartsevnik/sup_jbay_zone/6091d56ad988c976d25dc6ceb5531f9a1b5ef170/img/svg/serf-back.svg"
+                                            alt="serf sup"></div>
+                                    <div class="bottom-block__description">
+                                        <div class="bottom-block__contatti contatti" id="contatti">
+                                            <div class="contatti__title title">CONTATTI</div>
+                                            <div class="contatti__address">Italy, LEGNANO (MI), 20025</div>
+
+                                            <div class="contatti__ourFirm">
+                                                <div>Tutte le nostre offerte:</div>
+                                                <div>
+                                                    <a href="https://www.ebay.it/usr/funsunforyou" class="logo"><img
+                                                            src="https://raw.githubusercontent.com/kartsevnik/sup_jbay_zone/6091d56ad988c976d25dc6ceb5531f9a1b5ef170/img/svg/logo.svg"
+                                                            alt=""></a>
+                                                </div>
+                                            </div>
+
+                                            <div class="contatti__ourFirm">
+                                                <div>In collaborazione con:</div>
+                                                <div>
+                                                    <a href="https://www.jbay.zone/" class="logo"><img
+                                                            src="https://raw.githubusercontent.com/kartsevnik/sup_jbay_zone/main/img/svg/JBZ_logo_white.png"
+                                                            alt=""></a>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+
+        </main>
+    </div>
+</body>
